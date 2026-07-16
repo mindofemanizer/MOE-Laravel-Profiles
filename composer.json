@@ -1,0 +1,43 @@
+{
+    "name": "moe/laravel-profiles",
+    "description": "Per-user key-value profiles for Laravel — bio, avatar, social links, preferences",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MindOfEmanizer"
+        }
+    ],
+    "keywords": ["laravel", "profiles", "user-meta", "avatar", "moe"],
+    "autoload": {
+        "psr-4": {
+            "Moe\\Profiles\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Moe\\Profiles\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/database": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moe\\Profiles\\MoeProfilesServiceProvider"
+            ],
+            "aliases": {
+                "Profile": "Moe\\Profiles\\Facades\\Profile"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
