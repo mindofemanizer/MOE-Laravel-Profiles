@@ -1,54 +1,64 @@
-{
-    "name": "moe/laravel-profiles",
-    "description": "Per-user key-value profiles for Laravel — bio, avatar, social links, preferences",
-    "type": "library",
-    "license": "MIT",
-    "keywords": ["laravel", "profiles", "user-meta", "avatar", "moe"],
-    "authors": [
-        {
-            "name": "MindOfEmanizer",
-            "email": "mindofemanizer@users.noreply.github.com"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/mindofemanizer/MOE-Laravel-Profiles/issues",
-        "source": "https://github.com/mindofemanizer/MOE-Laravel-Profiles"
-    },
-    "require": {
-        "php": "^8.2",
-        "illuminate/support": "^11.0|^12.0|^13.0",
-        "illuminate/database": "^11.0|^12.0|^13.0"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^9.0",
-        "phpunit/phpunit": "^10.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "Moe\\Profiles\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Moe\\Profiles\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "test": "phpunit"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Moe\\Profiles\\MoeProfilesServiceProvider"
-            ],
-            "aliases": {
-                "Profile": "Moe\\Profiles\\Facades\\Profile"
-            }
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+﻿{
+    "name":  "moe/laravel-profiles",
+    "description":  "Per-user key-value profiles for Laravel â€” bio, avatar, social links, preferences",
+    "type":  "library",
+    "license":  "MIT",
+    "keywords":  [
+                     "laravel",
+                     "profiles",
+                     "user-meta",
+                     "avatar",
+                     "moe"
+                 ],
+    "authors":  [
+                    {
+                        "name":  "MindOfEmanizer",
+                        "email":  "mindofemanizer@users.noreply.github.com"
+                    }
+                ],
+    "support":  {
+                    "issues":  "https://github.com/mindofemanizer/MOE-Laravel-Profiles/issues",
+                    "source":  "https://github.com/mindofemanizer/MOE-Laravel-Profiles"
+                },
+    "require":  {
+                    "php":  "^8.2",
+                    "illuminate/support":  "^11.0|^12.0|^13.0",
+                    "illuminate/database":  "^11.0|^12.0|^13.0"
+                },
+    "require-dev":  {
+                        "orchestra/testbench":  "^9.0",
+                        "pestphp/pest":  "^3.0"
+                    },
+    "autoload":  {
+                     "psr-4":  {
+                                   "Moe\\Profiles\\":  "src/"
+                               }
+                 },
+    "autoload-dev":  {
+                         "psr-4":  {
+                                       "Moe\\Profiles\\Tests\\":  "tests/"
+                                   }
+                     },
+    "scripts":  {
+                    "test":  "pest",
+                    "test-coverage":  "pest --coverage"
+                },
+    "extra":  {
+                  "laravel":  {
+                                  "providers":  [
+                                                    "Moe\\Profiles\\MoeProfilesServiceProvider"
+                                                ],
+                                  "aliases":  {
+                                                  "Profile":  "Moe\\Profiles\\Facades\\Profile"
+                                              }
+                              }
+              },
+    "config":  {
+                   "sort-packages":  true,
+                   "allow-plugins":  {
+                                         "pestphp/pest-plugin":  true
+                                     }
+               },
+    "minimum-stability":  "dev",
+    "prefer-stable":  true
 }
