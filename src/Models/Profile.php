@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Profile extends Model
 {
-    protected $table = 'profiles';
-
     protected $fillable = [
         'profileable_id',
         'profileable_type',
@@ -16,6 +14,11 @@ class Profile extends Model
         'value',
         'type',
     ];
+
+    public function getTable(): string
+    {
+        return config('moe-profiles.table', parent::getTable() ?: 'profiles');
+    }
 
     public function profileable(): MorphTo
     {
