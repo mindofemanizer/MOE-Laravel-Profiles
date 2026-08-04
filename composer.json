@@ -1,4 +1,4 @@
-﻿{
+{
     "name":  "moe/laravel-profiles",
     "description":  "Per-user key-value profiles for Laravel â€” bio, avatar, social links, preferences",
     "type":  "library",
