@@ -3,21 +3,16 @@
     "description": "Per-user key-value profiles for Laravel — bio, avatar, social links, preferences",
     "type": "library",
     "license": "MIT",
+    "keywords": ["laravel", "profiles", "user-meta", "avatar", "moe"],
     "authors": [
         {
-            "name": "MindOfEmanizer"
+            "name": "MindOfEmanizer",
+            "email": "mindofemanizer@users.noreply.github.com"
         }
     ],
-    "keywords": ["laravel", "profiles", "user-meta", "avatar", "moe"],
-    "autoload": {
-        "psr-4": {
-            "Moe\\Profiles\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Moe\\Profiles\\Tests\\": "tests/"
-        }
+    "support": {
+        "issues": "https://github.com/mindofemanizer/MOE-Laravel-Profiles/issues",
+        "source": "https://github.com/mindofemanizer/MOE-Laravel-Profiles"
     },
     "require": {
         "php": "^8.2",
@@ -28,6 +23,19 @@
         "orchestra/testbench": "^9.0",
         "phpunit/phpunit": "^10.5"
     },
+    "autoload": {
+        "psr-4": {
+            "Moe\\Profiles\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Moe\\Profiles\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -37,6 +45,9 @@
                 "Profile": "Moe\\Profiles\\Facades\\Profile"
             }
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true
